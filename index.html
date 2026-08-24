@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#980000">
+  <meta name="theme-color" content="#970000">
 
   <title>ZM COSM. FILLERS</title>
 
@@ -12,282 +12,225 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html, body {
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 50% 0%, #d30b0b 0%, #ad0000 30%, #7b0000 70%, #520000 100%);
-      color: #f3cd70;
+      background: #970000;
+      color: #f5d477;
       font-family: Georgia, "Times New Roman", serif;
     }
 
     .page {
       width: 100%;
       max-width: 520px;
-      min-height: 100vh;
       margin: 0 auto;
-      padding: 14px 14px 28px;
-      background:
-        radial-gradient(circle at 50% 5%, rgba(255, 70, 50, .20), transparent 35%),
-        linear-gradient(180deg, rgba(160,0,0,.20), rgba(70,0,0,.25));
-      box-shadow: 0 0 45px rgba(0,0,0,.35);
+      padding: 14px 16px 20px;
+      background: #970000;
     }
 
-    .hero {
+    .box {
+      border: 1.5px solid #d7ad45;
+      border-radius: 26px;
+      background: #970000;
+      margin-bottom: 14px;
+    }
+
+    /* ЛОГОТИП */
+
+    .logo-box {
+      padding: 8px;
       overflow: hidden;
-      border: 1px solid #d8aa43;
-      border-radius: 28px;
-      background: #980000;
-      box-shadow:
-        0 10px 28px rgba(0,0,0,.30),
-        inset 0 0 25px rgba(255,185,50,.08);
     }
 
-    .hero img {
+    .logo-box img {
       display: block;
       width: 100%;
       height: auto;
+      border-radius: 20px;
     }
 
-    .motto {
-      margin: 16px 0;
-      padding: 17px 18px;
+    /* СЛОГАН */
+
+    .slogan {
+      padding: 18px 14px;
       text-align: center;
-      border: 1px solid #ddb24e;
-      border-radius: 24px;
-      background: rgba(83, 0, 0, .34);
-      box-shadow:
-        inset 0 0 18px rgba(255, 191, 59, .06),
-        0 6px 18px rgba(0,0,0,.15);
-    }
-
-    .motto .first {
-      display: block;
-      font-size: 23px;
+      font-size: 22px;
+      line-height: 1.35;
       font-style: italic;
-      line-height: 1.25;
     }
 
-    .motto .second {
-      display: block;
-      margin-top: 5px;
-      font-size: 20px;
-      font-style: italic;
-      line-height: 1.25;
+    /* ПРЕИМУЩЕСТВА */
+
+    .advantages {
+      padding: 4px 18px;
     }
 
-    .benefits {
-      padding: 6px 20px;
-      border: 1px solid #ddb24e;
-      border-radius: 26px;
-      background: rgba(73,0,0,.30);
-    }
-
-    .benefit {
-      display: grid;
-      grid-template-columns: 58px 1px 1fr;
+    .item {
+      min-height: 68px;
+      display: flex;
       align-items: center;
-      gap: 15px;
-      min-height: 82px;
-      border-bottom: 1px solid rgba(220,174,70,.48);
+      gap: 14px;
+      border-bottom: 1px solid rgba(215, 173, 69, 0.55);
+      padding: 8px 0;
     }
 
-    .benefit:last-child {
-      border-bottom: 0;
+    .item:last-child {
+      border-bottom: none;
     }
 
     .icon {
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
+      min-width: 54px;
+      border: 1.5px solid #d7ad45;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
-      font-size: 31px;
-      color: #ffd978;
-      border: 1px solid #d8aa43;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #a3190e, #5c0000);
-      box-shadow:
-        inset 0 0 12px rgba(255,207,90,.25),
-        0 3px 8px rgba(0,0,0,.3);
+      font-size: 25px;
+      line-height: 1;
+      background: #a40808;
+      color: #f5d477;
     }
 
-    .vline {
-      width: 1px;
-      height: 48px;
-      background: linear-gradient(
-        transparent,
-        #d8aa43 15%,
-        #d8aa43 85%,
-        transparent
-      );
-    }
-
-    .benefit-text {
+    .icon.work {
       font-size: 17px;
-      line-height: 1.25;
-      letter-spacing: .3px;
-      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: -1px;
     }
 
-    .contact {
-      margin-top: 16px;
-      padding: 17px 19px;
-      border: 1px solid #ddb24e;
-      border-radius: 26px;
-      background: rgba(73,0,0,.30);
+    .text {
+      border-left: 1px solid #d7ad45;
+      padding-left: 14px;
+      font-size: 17px;
+      line-height: 1.15;
+      text-transform: uppercase;
+      flex: 1;
+    }
+
+    /* КОНТАКТЫ */
+
+    .contacts {
+      padding: 10px 18px;
     }
 
     .contact-row {
       display: flex;
       align-items: center;
-      gap: 15px;
-    }
-
-    .contact-row + .contact-row {
-      margin-top: 13px;
+      gap: 14px;
+      min-height: 62px;
     }
 
     .contact-icon {
-      flex: 0 0 48px;
       width: 48px;
       height: 48px;
+      min-width: 48px;
+      border: 1.5px solid #d7ad45;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid #d8aa43;
-      border-radius: 50%;
-      font-family: Arial, sans-serif;
-      font-size: 25px;
-      background: linear-gradient(145deg, #a3190e, #5c0000);
-    }
-
-    .phone {
-      color: #f3cd70;
-      text-decoration: none;
-      font-size: clamp(25px, 7vw, 35px);
-      white-space: nowrap;
-      letter-spacing: 1px;
-    }
-
-    .city {
       font-size: 22px;
     }
 
+    .contact-text {
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    /* КНОПКИ */
+
     .buttons {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       gap: 10px;
-      margin-top: 16px;
+      margin-bottom: 16px;
     }
 
     .btn {
-      min-height: 94px;
-      padding: 12px 8px;
+      width: 50%;
+      min-height: 78px;
+      border: 1.5px solid #d7ad45;
+      border-radius: 25px;
+      background: #a40808;
+      color: #f5d477;
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-
-      border: 1px solid #e1b34d;
-      border-radius: 24px;
-
-      color: #f6d779;
-      text-decoration: none;
       text-align: center;
-
-      background:
-        linear-gradient(145deg, rgba(174,20,9,.95), rgba(89,0,0,.95));
-
-      box-shadow:
-        inset 0 0 18px rgba(255,190,64,.10),
-        0 6px 14px rgba(0,0,0,.20);
-    }
-
-    .btn:active {
-      transform: scale(.98);
-    }
-
-    .btn-symbol {
-      font-family: Arial, sans-serif;
-      font-size: 31px;
+      padding: 10px;
     }
 
     .btn-title {
       display: block;
-      font-size: 16px;
-      line-height: 1.15;
+      font-size: 17px;
+      line-height: 1.05;
       text-transform: uppercase;
     }
 
     .btn-small {
       display: block;
       margin-top: 4px;
-      font-size: 11px;
-      opacity: .88;
+      font-size: 12px;
+      text-transform: none;
     }
 
-    .thanks {
-      margin: 18px 0 3px;
+    /* НИЗ */
+
+    .footer {
       text-align: center;
-      font-size: 20px;
-      font-style: italic;
-      line-height: 1.3;
-    }
-
-    .decor {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 18px 28px 0;
-    }
-
-    .decor::before,
-    .decor::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        #d8aa43,
-        transparent
-      );
-    }
-
-    .decor span {
-      color: #ffd765;
       font-size: 18px;
+      font-style: italic;
+      padding: 4px 5px 12px;
     }
 
-    @media (max-width: 390px) {
-      .benefit {
-        grid-template-columns: 48px 1px 1fr;
-        gap: 11px;
-        min-height: 72px;
+    @media (max-width: 380px) {
+      .page {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .slogan {
+        font-size: 19px;
+        padding: 14px 10px;
+      }
+
+      .advantages {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .item {
+        gap: 10px;
+        min-height: 62px;
       }
 
       .icon {
-        width: 44px;
-        height: 44px;
-        font-size: 25px;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 22px;
       }
 
-      .benefit-text {
-        font-size: 14px;
+      .icon.work {
+        font-size: 15px;
       }
 
-      .buttons {
-        grid-template-columns: 1fr;
+      .text {
+        font-size: 15px;
+        padding-left: 10px;
       }
 
-      .phone {
-        font-size: 25px;
+      .contact-text {
+        font-size: 18px;
+      }
+
+      .btn-title {
+        font-size: 15px;
       }
     }
   </style>
@@ -297,95 +240,87 @@
 
   <main class="page">
 
-    <section class="hero">
-      <img src="logo.png" alt="ZM COSM. FILLERS">
+    <!-- ЛОГОТИП -->
+    <section class="box logo-box">
+      <img src="логотип.png" alt="ZM COSM. FILLERS">
     </section>
 
-    <section class="motto">
-      <span class="first">Красота в деталях,</span>
-      <span class="second">Совершенство в каждом движении.</span>
+    <!-- СЛОГАН -->
+    <section class="box slogan">
+      Красота в деталях,<br>
+      Совершенство в каждом движении.
     </section>
 
-    <section class="benefits">
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="box advantages">
 
-      <div class="benefit">
-        <div class="icon">🚚</div>
-        <div class="vline"></div>
-        <div class="benefit-text">Быстрая доставка</div>
-      </div>
-
-      <div class="benefit">
-        <div class="icon">🎁</div>
-        <div class="vline"></div>
-        <div class="benefit-text">Приятные презенты</div>
-      </div>
-
-      <div class="benefit">
-        <div class="icon">▣</div>
-        <div class="vline"></div>
-        <div class="benefit-text">Гибкая система оплаты</div>
-      </div>
-
-      <div class="benefit">
+      <div class="item">
         <div class="icon">✦</div>
-        <div class="vline"></div>
-        <div class="benefit-text">Индивидуальный подход</div>
+        <div class="text">Индивидуальный подход</div>
       </div>
 
-      <div class="benefit">
-        <div class="icon">24/7</div>
-        <div class="vline"></div>
-        <div class="benefit-text">Режим работы 24/7</div>
+      <div class="item">
+        <div class="icon">🚚</div>
+        <div class="text">Быстрая доставка</div>
+      </div>
+
+      <div class="item">
+        <div class="icon">▣</div>
+        <div class="text">Гибкая система оплаты</div>
+      </div>
+
+      <div class="item">
+        <div class="icon work">24/7</div>
+        <div class="text">Режим работы 24/7</div>
+      </div>
+
+      <div class="item">
+        <div class="icon">🎁</div>
+        <div class="text">Приятные презенты</div>
       </div>
 
     </section>
 
-    <section class="contact">
+    <!-- КОНТАКТЫ -->
+    <section class="box contacts">
 
       <div class="contact-row">
         <div class="contact-icon">☎</div>
-        <a class="phone" href="tel:+79380808686">
-          8-938-080-86-86
-        </a>
+        <div class="contact-text">8-938-080-86-86</div>
       </div>
 
       <div class="contact-row">
         <div class="contact-icon">⌖</div>
-        <div class="city">г. Нальчик</div>
+        <div class="contact-text">г. Нальчик</div>
       </div>
 
     </section>
 
+    <!-- КНОПКИ -->
     <section class="buttons">
 
       <a class="btn" href="tel:+79380808686">
-        <span class="btn-symbol">☎</span>
         <span>
-          <span class="btn-title">Позвонить</span>
+          <span class="btn-title">☎ Позвонить</span>
           <span class="btn-small">Нажмите, чтобы позвонить</span>
         </span>
       </a>
 
-      <a
-        class="btn"
-        href="https://wa.me/79380808686"
-        target="_blank"
-        rel="noopener"
-      >
-        <span class="btn-symbol">◉</span>
+      <a class="btn"
+         href="https://wa.me/79380808686"
+         target="_blank"
+         rel="noopener">
         <span>
-          <span class="btn-title">Написать в WhatsApp</span>
+          <span class="btn-title">Написать в<br>WhatsApp</span>
           <span class="btn-small">Нажмите, чтобы написать</span>
         </span>
       </a>
 
     </section>
 
-    <div class="decor"><span>●</span></div>
-
-    <div class="thanks">
-      Спасибо, что выбираете нас ♥
-    </div>
+    <footer class="footer">
+      Спасибо, что выбираете нас ❤️
+    </footer>
 
   </main>
 
